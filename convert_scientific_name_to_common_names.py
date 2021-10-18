@@ -1,4 +1,4 @@
-def convert(path = 'C:/Users/rahul/Google Drive/Work/important_R_codes/',specfile="speclist_uniprot.txt",outfile="Sci2Com.csv"):
+def convert(path = 'C:/Users/rahul/',specfile="speclist.txt",outfile="Sci2Com.csv"):
     f = open(path+specfile,'r')
     fw = open(path+outfile,'w')
     dic = {}
