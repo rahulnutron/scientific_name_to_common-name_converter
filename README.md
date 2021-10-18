@@ -27,4 +27,5 @@ A csv file "Sci2Com.csv" in your folder and a python dictionary
 [6] 'Bonobo'
 
 
-![image](https://user-images.githubusercontent.com/18325626/137793409-3e048859-5eda-42c2-b18d-835438d89072.png)
+![image](https://user-images.githubusercontent.com/18325626/137793476-8c6014fa-67d9-4f27-b851-32ab6b9ea469.png)
+
