@@ -21,3 +21,7 @@ A csv file "Sci2Com.csv" in your folder and a python dictionary
 [3] n2c['Homo sapiens']
 
 [4] 'Human'
+
+[5] n2c['Pan paniscus']
+
+[6] 'Bonobo'
