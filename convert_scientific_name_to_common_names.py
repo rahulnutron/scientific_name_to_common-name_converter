@@ -1,6 +1,7 @@
-def convert(path = 'C:/Users/rahul/',specfile="speclist.txt",outfile="Sci2Com.csv"):
+def convert(path = 'C:/Users/rahul/',specfile="speclist.txt",outfile="Sci2Com.csv",writefile=True):
     f = open(path+specfile,'r')
-    fw = open(path+outfile,'w')
+    if writefile:
+        fw = open(path+outfile,'w')
     dic = {}
     meta_list = []
     flag = 0
@@ -24,22 +25,22 @@ def convert(path = 'C:/Users/rahul/',specfile="speclist.txt",outfile="Sci2Com.cs
         if len(s) == 1 and flag == 1:
             meta_list.append(line)
     f.close()
-    fw.write('Official (scientific) name,Common name\n')
-    for N in dic:
-        if dic[N]!='':
-            fw.write(N+','+dic[N]+'\n')
-    for N in dic:
-        if dic[N]=='':
-            fw.write(N+','+dic[N]+'\n')
-    fw.close()
+    if writefile:
+        fw.write('Official (scientific) name,Common name\n')
+        for N in dic:
+            if dic[N]!='':
+                fw.write(N+','+dic[N]+'\n')
+        for N in dic:
+            if dic[N]=='':
+                fw.write(N+','+dic[N]+'\n')
+        fw.close()
 
     dic_rev = {dic[N]:N for N in dic}
 
     return dic, dic_rev
 
-#convert()
 
-def concise_fasta_header(repeat_entry = True,keep_des=True,spaceOrUnderscore = ' ',path='C:/Users/rahul/',d_file = 'Human_HBB-Alignment-Descriptions.csv',f_file='seqdump_human_HBB_homolog.fas',outfile='human_HBB_homolog.fas'):
+def concise_fasta_header(repeat_entry = True,keep_des=True,spaceOrUnderscore = ' ',path='C:/Users/rahul/Teaching/',d_file = 'Human_HBB-Alignment-Descriptions.csv',f_file='seqdump_human_HBB_homolog.fas',outfile='human_HBB_homolog.fas'):
     dic = {}
     des_file = open(path+d_file,'r')
     fas_file = open(path+f_file,'r')
@@ -51,12 +52,18 @@ def concise_fasta_header(repeat_entry = True,keep_des=True,spaceOrUnderscore = '
             dic[s[1]] = s[2]
     des_file.close()
     sn_list = []
+    gd, revgd = convert(writefile=False)
+    dk = dic.keys()
+    for N in gd:
+        if N not in dk:
+            dic[N] = gd[N]
     for line in fas_file:
         if repeat_entry:
             if '>' in line:
                 line = line.strip('\n')
                 s = line.split('[')
                 N = s[-1:][0].strip('[]')
+                #print s
                 if keep_des:
                     pid = s[0].strip('[]')
                 else:
@@ -90,3 +97,5 @@ def concise_fasta_header(repeat_entry = True,keep_des=True,spaceOrUnderscore = '
     fas_file.close()
     fw.close()
     return dic
+            
+#convert()
