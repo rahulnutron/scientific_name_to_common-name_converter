@@ -42,7 +42,7 @@ Download 'Description Table (csv) after selecting 'Common Name' from the NCBI BL
 
 Change the path and file names as yours and run:
 
-![image](https://user-images.githubusercontent.com/18325626/137903912-d8f25bb3-a620-4e0b-aab9-a014df0e7941.png)
+[9[ ![image](https://user-images.githubusercontent.com/18325626/137903912-d8f25bb3-a620-4e0b-aab9-a014df0e7941.png)
 
 
 
