@@ -10,6 +10,8 @@ to run (change the path as yours)
 
 [1] import convert_scientific_name_to_common_names
 
+**Function to get a general scientific name to common name dictionary**
+
 [2] n2c, c2n = convert_scientific_name_to_common_names.convert(path = 'C:/Users/rahul/',specfile="speclist.txt",outfile="Sci2Com.csv")
 
 output:
@@ -34,7 +36,9 @@ A csv file "Sci2Com.csv" in your folder and a python dictionary
 
 ![image](https://user-images.githubusercontent.com/18325626/137794665-84283b07-3e7e-4850-88dd-1e9956735290.png)
 
-Rename fasta file header's scientific name to common name before phylogeny analysis in MEGA
+**Function to make a fasta file with concise header and common names - useful before phylogeny analysis**
+
+Rename fasta file header's scientific name to common name before phylogeny analysis
 
 Download 'Description Table (csv) after selecting 'Common Name' from the NCBI BLAST output page
 
