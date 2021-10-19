@@ -1,4 +1,4 @@
-# scientific_name_to_common-name_converter
+# scientific_name_to_common-name_converter / rename fasta file header's scientific name to common name
 Convert scientific names to common names and vice versa
 
 Required file: https://www.uniprot.org/docs/speclist.txt
@@ -33,5 +33,10 @@ A csv file "Sci2Com.csv" in your folder and a python dictionary
 'Felis catus'
 
 ![image](https://user-images.githubusercontent.com/18325626/137794665-84283b07-3e7e-4850-88dd-1e9956735290.png)
+
+Rename fasta file header's scientific name to common name before phylogeny analysis in MEGA
+
+![image](https://user-images.githubusercontent.com/18325626/137903912-d8f25bb3-a620-4e0b-aab9-a014df0e7941.png)
+
 
 
