@@ -36,6 +36,12 @@ A csv file "Sci2Com.csv" in your folder and a python dictionary
 
 Rename fasta file header's scientific name to common name before phylogeny analysis in MEGA
 
+Download 'Description Table (csv) after selecting 'Common Name' from the NCBI BLAST output page
+
+![image](https://user-images.githubusercontent.com/18325626/137904789-64555590-c6c5-4d7b-9acd-d1d3e5da9470.png)
+
+Change the path and file names as yours and run:
+
 ![image](https://user-images.githubusercontent.com/18325626/137903912-d8f25bb3-a620-4e0b-aab9-a014df0e7941.png)
 
 
